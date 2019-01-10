@@ -28,8 +28,8 @@ namespace CoreWebApi
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
               //添加cors 服务
-            services.AddCors(options =>options.AddPolicy("CorsSample",p => p.WithOrigins("http://localhost:5000")
-            .AllowAnyMethod().AllowAnyHeader()));
+            services.AddCors(options =>options.AddPolicy("CorsSample",p => p.WithOrigins("http://localhost:8080")
+            .AllowAnyMethod().AllowAnyHeader().AllowCredentials()));
            
         }
 
